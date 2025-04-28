@@ -56,7 +56,7 @@ module.exports = {
           owner: 'yashvi03',
           name: 'electron-learning-app'
         },
-        authToken: process.env.GITHUB_TOKEN,
+        // authToken: process.env.GITHUB_TOKEN,
         prerelease: false,
         draft: true
       }
