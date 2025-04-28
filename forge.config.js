@@ -1,11 +1,11 @@
 const { FusesPlugin } = require("@electron-forge/plugin-fuses");
 const { FuseV1Options, FuseVersion } = require("@electron/fuses");
-require('dotenv').config();
-
+require("dotenv").config();
 
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: "./assets/tree",
   },
   rebuildConfig: {},
   makers: [
@@ -52,16 +52,16 @@ module.exports = {
   ],
   publishers: [
     {
-      name: '@electron-forge/publisher-github',
+      name: "@electron-forge/publisher-github",
       config: {
         repository: {
-          owner: 'yashvi03',
-          name: 'electron-learning-app'
+          owner: "yashvi03",
+          name: "electron-learning-app",
         },
         // authToken: process.env.GITHUB_TOKEN,
         prerelease: false,
-        draft: true
-      }
-    }
-  ]
+        draft: true,
+      },
+    },
+  ],
 };
