@@ -71,17 +71,20 @@ function drawGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw snake
-  ctx.fillStyle = 'green';
+  ctx.fillStyle = 'white';
   for (let i = 0; i < snake.length; i++) {
     ctx.fillRect(snake[i].x * gridSize, snake[i].y * gridSize, gridSize, gridSize);
   }
 
   // Draw food
-  ctx.fillStyle = 'red';
+  ctx.fillStyle = 'black';
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 2; 
   ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
+  ctx.strokeRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
 
   // Draw score
-  ctx.fillStyle = 'black';
+  ctx.fillStyle = 'white';
   ctx.font = '20px Arial';
   ctx.fillText('Score: ' + score, 10, 20);
 }
